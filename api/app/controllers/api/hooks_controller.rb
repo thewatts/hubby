@@ -37,7 +37,7 @@ class Api::HooksController < Api::ApplicationController
   end
 
   def push(post)
-    channel.trigger('post-created', data: post.to_json)
+    channel.trigger('post_created', data: post.to_json)
   end
 
   def channel

@@ -12,10 +12,21 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    contentSecurityPolicy: {
+      'style-src': "'self' 'unsafe-inline' maxcdn.bootstrapcdn.com",
+      'script-src': "'self' stats.pusher.com",
+      'font-src': "maxcdn.bootstrapcdn.com",
+      'connect-src': "'self' ws://*.pusherapp.com"
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      PUSHER_OPTS: {
+        key: "bafb121ceb8560be5369",
+        connection: {},
+        logAllEvents: true
+      }
     }
   };
 
